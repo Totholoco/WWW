@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon3">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        app:srcCompat="@drawable/iconlogin" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/imageView4"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Nombre"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <EditText
+        android:id="@+id/txtApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNombre"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Apellido"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <EditText
+        android:id="@+id/txtRut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txtApellido"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="RUT"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txtRut"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Correo electronico"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <EditText
+        android:id="@+id/txtClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txtCorreo"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Contraseña"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <Button
+        android:id="@+id/btnDevolverInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtClave"
+        android:layout_centerInParent="true"
+        android:text="@string/atras"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+    <Button
+        android:id="@+id/btnSeguirRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDevolverInicio"
+        android:layout_centerInParent="true"
+        android:text="@string/continuar_con_el_registro"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="611dp" />
+</RelativeLayout>

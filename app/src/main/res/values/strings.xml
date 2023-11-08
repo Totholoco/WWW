@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">miejemplo</string>
+    <string name="continuar_con_el_registro">Continuar con el registro!</string>
+    <string name="atras">Atras</string>
+    <string name="ingrese_sus_datos_para_registrarse">Ingrese sus datos para registrarse</string>
+    <string name="mantener_sesion">Mantener sesion?</string>
+    <string name="title_activity_mapbox">Mapbox</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoidG90aG9sb2NvIiwiYSI6ImNsb2pheHpnNjA1ZWgya21ybmJ5bmk2amkifQ.uSgYCOzTRaoNmjL03V7RcA</string>
+</resources>

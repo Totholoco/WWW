@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/fon3">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        app:srcCompat="@drawable/iconlogin" />
+
+    <TextView
+        android:id="@+id/textoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:layout_centerInParent="true"
+        android:text="Usuario"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <EditText
+        android:id="@+id/txtInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textoUsuario"
+        android:layout_centerInParent="true"
+        android:background="#606060"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="212dp" />
+    <TextView
+        android:id="@+id/textoclave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:text="Contraseña"
+        android:layout_below="@id/txtInicioSesion"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="290dp"
+        />
+
+    <EditText
+        android:id="@+id/txtClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textoclave"
+        android:layout_centerInParent="true"
+        android:background="#606060"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <CheckBox
+        android:id="@+id/cboxMantener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtClave"
+        android:layout_centerInParent="true"
+        android:text="@string/mantener_sesion"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cboxMantener"
+        android:layout_centerInParent="true"
+        android:text="Iniciar Sesion"
+        android:textSize="20dp"
+        app:icon="@android:drawable/ic_media_play"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="472dp" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnIniciarSesion"
+        android:layout_centerInParent="true"
+        android:text="No tienes cuenta? Registrate!"
+        android:textSize="20dp"
+        app:icon="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="551dp" />
+
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRegistrarse"
+        android:layout_centerInParent="true"
+        android:text="No recuerdas tu clave? Recuperala!"
+        android:textSize="20dp"
+        app:icon="@android:drawable/ic_menu_compass"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="626dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRecuperar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="6dp"
+        app:srcCompat="@android:mipmap/sym_def_app_icon"
+
+        tools:layout_editor_absoluteX="363dp"
+        tools:layout_editor_absoluteY="684dp" />
+
+
+
+</RelativeLayout>
