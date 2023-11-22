@@ -7,13 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import android.widget.EditText;
+import androidx.annotation.NonNull;
+
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
-    Button logearse;
-    Button register;
-    Button recuperar;
+
+    EditText correoLogin,claveLogin;
+    Button BotonLogin,BotonRegistro,recuperar;
+    FirebaseAuth mAtuh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,28 +30,50 @@ public class Login extends AppCompatActivity {
         Intent serviceIntent = new Intent(this, ProximityService.class);
         startService(serviceIntent);
 
+        //Iniciar Sesion
+        correoLogin = findViewById(R.id.txtLogin);
+        claveLogin = findViewById(R.id.txtConfirmContraseña);
+        //Botones
+        BotonLogin = findViewById(R.id.btnEntrar);
+        BotonRegistro = findViewById(R.id.btnRegistro);
         recuperar=(Button)findViewById(R.id.btnRecuperar);
-        logearse=(Button)findViewById(R.id.btnIniciarSesion);
-        register=(Button)findViewById(R.id.btnRegistrarse);
-        logearse.setOnClickListener(new View.OnClickListener() {
+        //Base de datos
+        mAtuh = FirebaseAuth.getInstance();
+
+        BotonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (Login.this, Screencard.class);
-                startActivity(i);
+                login();
             }
+
         });
-        register.setOnClickListener(new View.OnClickListener() {
+        BotonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (Login.this, Register.class);
+                Intent i = new Intent (Login.this,Registro.class);
                 startActivity(i);
             }
         });
         recuperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (Login.this, lostaccount.class);
+                Intent i = new Intent (Login.this, RecuperarCuenta.class);
                 startActivity(i);
+            }
+        });
+    }
+    private void login() {
+        String emailLogin = correoLogin.getText().toString();
+        String contrasenaLogin = claveLogin.getText().toString();
+        mAtuh.signInWithEmailAndPassword(emailLogin,contrasenaLogin).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Intent intent = new Intent(Login.this,Screencard.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(Login.this, "Credenciales no Validas", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

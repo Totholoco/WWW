@@ -61,6 +61,5 @@
         android:layout_centerInParent="true"
         android:text="recuperar_contrasena"
         tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="611dp"
-        />
+        tools:layout_editor_absoluteY="611dp" />
 </RelativeLayout>

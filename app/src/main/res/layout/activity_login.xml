@@ -21,14 +21,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView3"
         android:layout_centerInParent="true"
-        android:text="Usuario"
+        android:text="Correo Electronico"
         android:textColor="@color/white"
         android:textSize="30dp"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="187dp" />
 
     <EditText
-        android:id="@+id/txtInicioSesion"
+        android:id="@+id/txtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textoUsuario"
@@ -50,13 +50,13 @@
         android:textColor="@color/white"
         android:textSize="30dp"
         android:text="Contraseña"
-        android:layout_below="@id/txtInicioSesion"
+        android:layout_below="@id/txtLogin"
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="290dp"
         />
 
     <EditText
-        android:id="@+id/txtClave"
+        android:id="@+id/txtConfirmContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textoclave"
@@ -75,7 +75,7 @@
         android:id="@+id/cboxMantener"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtClave"
+        android:layout_below="@+id/txtConfirmContraseña"
         android:layout_centerInParent="true"
         android:text="@string/mantener_sesion"
         android:textColor="@color/white"
@@ -83,7 +83,7 @@
         tools:layout_editor_absoluteY="374dp" />
 
     <Button
-        android:id="@+id/btnIniciarSesion"
+        android:id="@+id/btnEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cboxMantener"
@@ -95,10 +95,10 @@
         tools:layout_editor_absoluteY="472dp" />
 
     <Button
-        android:id="@+id/btnRegistrarse"
+        android:id="@+id/btnRegistro"
         android:layout_width="286dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnIniciarSesion"
+        android:layout_below="@+id/btnEntrar"
         android:layout_centerInParent="true"
         android:text="No tienes cuenta? Registrate!"
         android:textSize="20dp"
@@ -110,7 +110,7 @@
         android:id="@+id/btnRecuperar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnRegistrarse"
+        android:layout_below="@+id/btnRegistro"
         android:layout_centerInParent="true"
         android:text="No recuerdas tu clave? Recuperala!"
         android:textSize="20dp"
