@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.theme.lostaccount"
+    android:background="@drawable/fon3">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        app:srcCompat="@drawable/iconlogin"
+        />
+
+    <EditText
+        android:id="@+id/txtCorreoRecuperar"
+        android:layout_width="303dp"
+        android:layout_height="51dp"
+        android:layout_centerInParent="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Correo"
+        android:textColor="@color/white"
+
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <TextView
+        android:id="@+id/textoCambiarclave"
+        android:layout_width="378dp"
+        android:layout_height="71dp"
+        android:layout_below="@id/imageView3"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="52dp"
+        android:text="Ingrese su correo para recuperar clave"
+        android:textColor="@color/white"
+
+        android:textSize="30sp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <Button
+        android:id="@+id/btnDevolverInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/txtCorreoRecuperar"
+        android:text="@string/atras"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="611dp"
+        />
+
+    <Button
+        android:id="@+id/btnEnviarcorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDevolverInicio"
+        android:layout_centerInParent="true"
+        android:text="recuperar_contrasena"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="611dp"
+        />
+</RelativeLayout>
