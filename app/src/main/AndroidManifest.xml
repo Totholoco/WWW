@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.PROXIMITY_SCREEN_OFF_WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -40,7 +43,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <service android:name=".ui.theme.ProximityService" />
     </application>
 
 </manifest>

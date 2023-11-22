@@ -18,6 +18,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Intent serviceIntent = new Intent(this, ProximityService.class);
+        startService(serviceIntent);
+
         logearse=(Button)findViewById(R.id.btnIniciarSesion);
         register=(Button)findViewById(R.id.btnRegistrarse);
         logearse.setOnClickListener(new View.OnClickListener() {
@@ -34,5 +37,13 @@ public class Login extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // Detener el servicio
+        Intent serviceIntent = new Intent(this, ProximityService.class);
+        stopService(serviceIntent);
     }
 }
