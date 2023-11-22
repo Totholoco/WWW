@@ -13,6 +13,7 @@ import java.util.TimerTask;
 public class Login extends AppCompatActivity {
     Button logearse;
     Button register;
+    Button recuperar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,7 @@ public class Login extends AppCompatActivity {
         Intent serviceIntent = new Intent(this, ProximityService.class);
         startService(serviceIntent);
 
+        recuperar=(Button)findViewById(R.id.btnRecuperar);
         logearse=(Button)findViewById(R.id.btnIniciarSesion);
         register=(Button)findViewById(R.id.btnRegistrarse);
         logearse.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +36,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent (Login.this, Register.class);
+                startActivity(i);
+            }
+        });
+        recuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent (Login.this, lostaccount.class);
                 startActivity(i);
             }
         });

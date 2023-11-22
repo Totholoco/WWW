@@ -47,12 +47,11 @@
         android:id="@+id/btnDevolverInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/txtCorreoRecuperar"
+        android:layout_centerInParent="true"
         android:text="@string/atras"
         tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="611dp"
-        />
+        tools:layout_editor_absoluteY="611dp" />
 
     <Button
         android:id="@+id/btnEnviarcorreo"
