@@ -27,6 +27,7 @@ public class Screencard extends AppCompatActivity {
 
     Button VolverInicio;
     Button BotonMapa;
+    Button CrudEditor;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +36,20 @@ public class Screencard extends AppCompatActivity {
         //Boton para volver atras
         VolverInicio=(Button)findViewById(R.id.btnVolverInicio);
         BotonMapa=(Button)findViewById(R.id.btnMapa);
+        CrudEditor=(Button)findViewById(R.id.btnCrud);
+        CrudEditor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent (Screencard.this, crudeditor.class);
+                startActivity(i);
+            }
+        });
         VolverInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent (Screencard.this, Login.class);
                 startActivity(i);
             }
-
         });
         BotonMapa.setOnClickListener(new View.OnClickListener() {
             @Override

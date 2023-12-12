@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Screencard"
     android:background="@drawable/fon3"
-    >
+    tools:ignore="ExtraText">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"
@@ -26,9 +26,20 @@
 
     <Button
         android:id="@+id/btnMapa"
-        android:layout_width="380dp"
+        android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_recycler_view"
         android:layout_marginTop="-48dp"
         android:text="Buscar en mapa" />
+
+    <Button
+        android:id="@+id/btnCrud"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_recycler_view"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-46dp"
+        android:layout_toEndOf="@+id/btnMapa"
+        android:minHeight="48dp"
+        android:text="Registro Usuarios" />
 </RelativeLayout>
